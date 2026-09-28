@@ -1,0 +1,214 @@
+{
+  "format_version": 1,
+  "selected_variant": "catboost_full_no_history_features",
+  "selection": {
+    "selection_basis": "dev only; test was not read",
+    "rule": "maximize union/dev among models within 0.01 Recall@50 of the best model on benchmark_plus_positives/dev",
+    "secondary_tolerance": 0.01,
+    "selected_variant": "catboost_full_no_history_features",
+    "union_only_variant": "catboost_full_with_history_features",
+    "selected_union_dev_recall50": 0.7180376054225251,
+    "selected_augmented_dev_recall50": 0.7890414072562177,
+    "union_only_union_dev_recall50": 0.7247089908665162,
+    "union_only_augmented_dev_recall50": 0.7733717814861847,
+    "model_dev_scores": {
+      "catboost_text_pool": {
+        "union": 0.7176946294947293,
+        "benchmark_plus_positives": 0.7885167811972599
+      },
+      "catboost_full_no_history_features": {
+        "union": 0.7180376054225251,
+        "benchmark_plus_positives": 0.7890414072562177
+      },
+      "catboost_full_with_history_features": {
+        "union": 0.7247089908665162,
+        "benchmark_plus_positives": 0.7733717814861847
+      }
+    },
+    "eligible_variants": [
+      "catboost_text_pool",
+      "catboost_full_no_history_features"
+    ],
+    "dev_groups": 35652,
+    "dev_metrics_sha256": "4f6cac80cd3d54b1be72096b66cb873611f70af1e303a9c8c7b62c842104fb05",
+    "created_utc": "2026-09-26T15:51:23.462481+00:00"
+  },
+  "answer_sha256": "1844e8dc91fd5d562aed1ca79f34598105bc3d6e3c8497a12ebb3c0dcd2be44e",
+  "query_count": 2452,
+  "source_manifest": {
+    "train.parquet": {
+      "sha256": "e150ab7a5c98769f643b95ee3a02dc0f664b647facd69a7d280ec6d48ca554a7",
+      "bytes": 490236125
+    },
+    "benchmark_queries.parquet": {
+      "sha256": "e49de4fb76f03979a4af96034817767d39ae5de9f94e254fed028243188dda06",
+      "bytes": 127374
+    },
+    "benchmark_items.parquet": {
+      "sha256": "193b3a3961464620cbf8d8797152b7f90cae1826ca749fb7817a210984a09899",
+      "bytes": 195679553
+    }
+  },
+  "code_sha256": {
+    "ranker.py": "2fba152464b4ef8386a5fc52f4fd5f11ab2e17b23957d157b758211bcf3bde53",
+    "extended_validation.py": "5ca61c3ab0e9a6c7086167ae416105f4e7840487820fdb2051687fceddab8cc8",
+    "retrieval.py": "3aa73c28c7e74f686bdcee60fc3b8f630e52818a236afc7cbb37185c0c6545ca",
+    "data.py": "c4983a4af96ec03ead7f5351af932656ca2ce2ce656228fed895215f9e7f3447"
+  },
+  "prediction_code_sha256": "72a855cb27c57ea6666523ef8808974d9723d4b385fcde99c6649b0d07685f63",
+  "uv_lock_sha256": "b44c45170728f39e9440bfea8da5ee86784c0e32fbe31659477e230b5ea2f079",
+  "original_uv_lock_sha256": "9cc044843d6528a5efe5ea336f33127d2a9c3ff25c535cd2f5250d1280576517",
+  "artifacts_sha256": {
+    "text_model.cbm": "2aea38760d0bcaa4947ebc2bfb49b2396a7a1d98e423a8b486773538ac359403",
+    "history_model.cbm": "89ae95ca9b9edaff1344ff9b1b98504ddfe174d63b24128bea9db74ebc6e90f5",
+    "all_train_signals.joblib": "298d85d964c2458daf7b9951237328c881a2c1033a26d1d49e95aa6c7abc41c2"
+  },
+  "model_params": {
+    "loss_function": "PairLogit",
+    "iterations": 240,
+    "depth": 6,
+    "learning_rate": 0.06,
+    "l2_leaf_reg": 4.0,
+    "random_seed": 20260926,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "model_features": {
+    "text": [
+      "bm25_title",
+      "bm25_params",
+      "bm25_description",
+      "bm25_raw",
+      "char_raw",
+      "title_ratio",
+      "params_ratio",
+      "description_ratio",
+      "bm25_ratio",
+      "char_ratio",
+      "title_gap",
+      "params_gap",
+      "description_gap",
+      "bm25_gap",
+      "char_gap",
+      "geo_bm25_rank",
+      "geo_char_rank",
+      "geo_bm25_missing",
+      "geo_char_missing",
+      "geo_best_rank",
+      "geo_source_count",
+      "geo_bm25_ratio",
+      "geo_char_ratio",
+      "same_location",
+      "same_category",
+      "delivery_query",
+      "query_token_count",
+      "query_title_coverage",
+      "query_params_coverage",
+      "query_in_title",
+      "query_in_params",
+      "has_filters",
+      "filter_token_count",
+      "filter_params_coverage",
+      "filter_in_params",
+      "rating",
+      "rating_missing",
+      "reviews_log",
+      "reviews_missing",
+      "price_log",
+      "price_missing"
+    ],
+    "history": [
+      "bm25_title",
+      "bm25_params",
+      "bm25_description",
+      "bm25_raw",
+      "char_raw",
+      "title_ratio",
+      "params_ratio",
+      "description_ratio",
+      "bm25_ratio",
+      "char_ratio",
+      "title_gap",
+      "params_gap",
+      "description_gap",
+      "bm25_gap",
+      "char_gap",
+      "geo_bm25_rank",
+      "geo_char_rank",
+      "geo_bm25_missing",
+      "geo_char_missing",
+      "geo_best_rank",
+      "geo_source_count",
+      "geo_bm25_ratio",
+      "geo_char_ratio",
+      "same_location",
+      "same_category",
+      "delivery_query",
+      "query_token_count",
+      "query_title_coverage",
+      "query_params_coverage",
+      "query_in_title",
+      "query_in_params",
+      "has_filters",
+      "filter_token_count",
+      "filter_params_coverage",
+      "filter_in_params",
+      "rating",
+      "rating_missing",
+      "reviews_log",
+      "reviews_missing",
+      "price_log",
+      "price_missing",
+      "stats_bm25_rank",
+      "stats_char_rank",
+      "history_rank",
+      "stats_bm25_missing",
+      "stats_char_missing",
+      "history_missing",
+      "all_best_rank",
+      "all_source_count",
+      "stats_bm25_ratio",
+      "stats_char_ratio",
+      "history_raw",
+      "history_ratio",
+      "history_nearest_similarity",
+      "train_clicks_log",
+      "category_prior"
+    ]
+  },
+  "feature_version": 1,
+  "retrieval": {
+    "index_config": {
+      "version": 1,
+      "k1": 1.2,
+      "b": 0.75,
+      "min_df": 2,
+      "word_max_features": 250000,
+      "char_max_features": 250000,
+      "char_ngrams": [
+        3,
+        5
+      ],
+      "field_weights": [
+        3.0,
+        0.6,
+        1.0
+      ],
+      "description_limit": null,
+      "char_fields": "title"
+    },
+    "source_depth": 500,
+    "pool_sources": [
+      "bm25_geo16",
+      "char_geo16",
+      "bm25_stats",
+      "char_stats",
+      "history"
+    ]
+  },
+  "seed": 20260926,
+  "training_signals": "all_train_signals.joblib; built from all train rows",
+  "corpus": "benchmark_items for candidates; union index for text statistics"
+}

@@ -1,0 +1,55 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local cache and disposable intermediate results
+*.parquet
+.uv-cache/
+/artifacts/**
+answer*.csv
+
+# Input data and the two CSV files used by the frozen final prediction.
+!src/avito_test/train.parquet
+!src/avito_test/benchmark_queries.parquet
+!src/avito_test/benchmark_items.parquet
+!answer_semantic_full.csv
+!answer_semantic_full_D.csv
+
+# Only the artifacts read by semantic_full_d_predict/verify are versioned.
+!/artifacts/expanded/
+!/artifacts/expanded/cache/
+!/artifacts/expanded/cache/73915bb3bc082213/
+!/artifacts/expanded/cache/73915bb3bc082213/union_index.joblib
+!/artifacts/expanded/cache/73915bb3bc082213/items.parquet
+!/artifacts/expanded/cache/73915bb3bc082213/features.parquet
+!/artifacts/expanded/cache/73915bb3bc082213/features_signature.json
+
+!/artifacts/semantic/
+!/artifacts/semantic/embeddings/
+!/artifacts/semantic/embeddings/encode_state.json
+!/artifacts/semantic/embeddings/item_to_text.npy
+!/artifacts/semantic/embeddings/item_vectors.npy
+!/artifacts/semantic/embeddings/unique_vectors.npy
+!/artifacts/semantic/embeddings/query_vectors.parquet
+!/artifacts/semantic/embeddings/query_vectors_manifest.json
+
+!/artifacts/semantic_full_d/
+!/artifacts/semantic_full_d/decision.json
+!/artifacts/semantic_full_d/full_unweighted.cbm
+!/artifacts/semantic_full_d/full_unweighted.json
+!/artifacts/semantic_full_d/evaluation/
+!/artifacts/semantic_full_d/evaluation/dev/
+!/artifacts/semantic_full_d/evaluation/dev/per_query.parquet
+
+# Old E5 backends are not needed for the submitted ONNX inference path.
+/models/multilingual-e5-small-614241f6/
+/models/multilingual-e5-small-614241f6-onnx-int8/
+!models/semantic_full_v1/item_id_to_vector_row.parquet
+!models/semantic_full_D_v1/item_id_to_vector_row.parquet

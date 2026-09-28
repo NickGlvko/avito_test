@@ -1,0 +1,52 @@
+{
+  "variant": "B15000",
+  "answer": "answer_semantic_15000.csv",
+  "answer_sha256": "d15c200f8f6629f3dd515608d8ffdc8771cf555979860c842c73dcd95b8b1588",
+  "validation": {
+    "queries": 2452,
+    "min_candidates": 50,
+    "max_candidates": 50
+  },
+  "model_sha256": "532f621cfaf70a1062662e88fc5e9381351dc5496df9db697930f6d8fdcb42d7",
+  "training_sha256": "cbeb1532f8cd700559392bde394e12a82667adb0e8e587de62d8203cafee7b4d",
+  "control_answer_sha256": "dae345771a30e0c7829ae9477e0b757be6210fae1bda20e9f539cd2ea1d5813c",
+  "dev_decision": {
+    "selected": "B15000",
+    "eligible_B15000": true,
+    "eligible_D15000": false,
+    "rule": "positive text-cluster paired CI versus submitted B on union/dev; no augmented/dev mean loss; D additionally needs positive CI versus B15000 and no augmented loss versus B15000",
+    "dev_per_query_sha256": "c14659785433eb26cde5dd6dbd262d6b86c6813b7bf4d2f54477fc9734824006",
+    "dev_union_recall50": 0.7404909780516041,
+    "dev_augmented_recall50": 0.8067535105319754,
+    "submitted_B_union_recall50": 0.7381082997631614,
+    "submitted_B_augmented_recall50": 0.8034454402890765
+  },
+  "e5_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "e5_model": "models\\multilingual-e5-small-614241f6-onnx",
+  "e5_weights_sha256": "5783bc27ecf1f51574a9d0b69294e947cce5918158252f4b60d14a7fb8508fd5",
+  "e5_tokenizer_sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932",
+  "item_id_mapping_sha256": "c86f9616066c689095d552bc48abdcb67975360474ab145da361f5c889631862",
+  "item_vector_rows": 515895,
+  "item_vectors_sha256": "1829fb9e34c47312b65efd2fef171248eeb9e5db739df93d238e603859bf15dd",
+  "unique_vectors_sha256": "598a4820dcec83498f3292ffefe04037378c41a7c529f9b8a197d5d4c47ad2f4",
+  "item_to_text_sha256": "eab77686f2f11324efa5924ee8a5672db4c63342f866977f4b6ea27af6e91830",
+  "all_train_signals_sha256": "298d85d964c2458daf7b9951237328c881a2c1033a26d1d49e95aa6c7abc41c2",
+  "uv_lock_sha256": "b44c45170728f39e9440bfea8da5ee86784c0e32fbe31659477e230b5ea2f079",
+  "code_sha256": "2ec1560b413f868e0ef1127b0a5ba2ffa1415ada2cecc381730be0ba821de1eb",
+  "sources": {
+    "train.parquet": {
+      "sha256": "e150ab7a5c98769f643b95ee3a02dc0f664b647facd69a7d280ec6d48ca554a7",
+      "bytes": 490236125
+    },
+    "benchmark_queries.parquet": {
+      "sha256": "e49de4fb76f03979a4af96034817767d39ae5de9f94e254fed028243188dda06",
+      "bytes": 127374
+    },
+    "benchmark_items.parquet": {
+      "sha256": "193b3a3961464620cbf8d8797152b7f90cae1826ca749fb7817a210984a09899",
+      "bytes": 195679553
+    }
+  },
+  "seconds": 472.9978817000083,
+  "peak_rss_bytes": 4783972352
+}

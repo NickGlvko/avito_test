@@ -1,0 +1,9 @@
+# Large, indispensable prediction inputs live in Git LFS rather than regular Git blobs.
+src/avito_test/train.parquet filter=lfs diff=lfs merge=lfs -text
+src/avito_test/benchmark_items.parquet filter=lfs diff=lfs merge=lfs -text
+artifacts/expanded/cache/73915bb3bc082213/union_index.joblib filter=lfs diff=lfs merge=lfs -text
+artifacts/expanded/cache/73915bb3bc082213/features.parquet filter=lfs diff=lfs merge=lfs -text
+artifacts/semantic/embeddings/*.npy filter=lfs diff=lfs merge=lfs -text
+artifacts/semantic/embeddings/query_vectors.parquet filter=lfs diff=lfs merge=lfs -text
+models/multilingual-e5-small-614241f6-onnx/onnx/model.onnx filter=lfs diff=lfs merge=lfs -text
+models/ranker_v1/all_train_signals.joblib filter=lfs diff=lfs merge=lfs -text

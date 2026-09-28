@@ -1,0 +1,32 @@
+{
+  "experiment": "rrf_history_half",
+  "weights": {
+    "bm25_stats": 1.0,
+    "char_stats": 1.0,
+    "history": 0.5
+  },
+  "rrf_k": 60,
+  "depth": 500,
+  "index": {
+    "version": 1,
+    "k1": 1.2,
+    "b": 0.75,
+    "min_df": 2,
+    "word_max_features": 250000,
+    "char_max_features": 250000,
+    "char_ngrams": [
+      3,
+      5
+    ],
+    "field_weights": [
+      3.0,
+      0.6,
+      1.0
+    ],
+    "description_limit": null,
+    "char_fields": "title"
+  },
+  "selection": "highest macro Recall@50 on group/dev; tie broken by experiment name",
+  "dev_recall50": 0.76931330472103,
+  "dev_queries": 1864
+}

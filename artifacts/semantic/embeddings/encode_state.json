@@ -1,0 +1,36 @@
+{
+  "signature": {
+    "item_text_sha256": "959cbe4e725239d1a502246023574adc8c9043a2ae2c41a0141b7b912dd1a8ab",
+    "weights_sha256": "5783bc27ecf1f51574a9d0b69294e947cce5918158252f4b60d14a7fb8508fd5",
+    "tokenizer_sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932",
+    "max_tokens": 256,
+    "batch_size": 32,
+    "dim": 384
+  },
+  "next_row": 515836,
+  "complete": true,
+  "elapsed_seconds": 11542.434204600046,
+  "item_count": 515895,
+  "unique_texts": 515836,
+  "vector_sha256": "598a4820dcec83498f3292ffefe04037378c41a7c529f9b8a197d5d4c47ad2f4",
+  "inverse_sha256": "eab77686f2f11324efa5924ee8a5672db4c63342f866977f4b6ea27af6e91830",
+  "parallel_segments": [
+    {
+      "start": 144000,
+      "end": 268000,
+      "elapsed_seconds": 9648.751525000022
+    },
+    {
+      "start": 268000,
+      "end": 392000,
+      "elapsed_seconds": 8762.009270499999
+    },
+    {
+      "start": 392000,
+      "end": 515836,
+      "elapsed_seconds": 8890.154670000004
+    }
+  ],
+  "sampled_norm_max_error": 1.1920928955078125e-07,
+  "all_vectors_norm_max_error": 1.7881393432617188e-07
+}

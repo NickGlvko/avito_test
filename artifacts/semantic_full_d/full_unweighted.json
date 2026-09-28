@@ -1,0 +1,28 @@
+{
+  "variant": "unweighted",
+  "model": "artifacts\\semantic_full_d\\full_unweighted.cbm",
+  "model_sha256": "3f10ab3889a83996e3587396869ea2185e63fd75025257d22856ac3779aaa3cb",
+  "params": {
+    "loss_function": "PairLogit",
+    "iterations": 240,
+    "depth": 6,
+    "learning_rate": 0.06,
+    "l2_leaf_reg": 4.0,
+    "random_seed": 20260926,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "quantized_pool_sha256": "cadbccecf88c5c1635aab26e0f6062f2d97f15ecf45e888584660f1021679bdf",
+  "group_weight_rule": "1",
+  "rows": 16676985,
+  "groups": 13869,
+  "positive_rows": 18392,
+  "unlabeled_rows": 16658593,
+  "automatically_generated_pairs": 22550173,
+  "previous_pairs": 2758800,
+  "max_pairs": null,
+  "train_seconds": 2456.379716800002,
+  "peak_rss_bytes": 6702710784
+}

@@ -1,0 +1,7 @@
+{
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "model_sha256": "5783bc27ecf1f51574a9d0b69294e947cce5918158252f4b60d14a7fb8508fd5",
+  "tokenizer_sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932",
+  "max_tokens": 256,
+  "query_policy": "query: + clean natural text"
+}
